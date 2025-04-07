@@ -21,7 +21,7 @@ fastify.get("/", async () => {
 setupRoutes(fastify);
 
 dbConnection.once('open', () => {
-  console.log(`Connected to MongoDB at ${dbUrl}`);
+  console.log(`Connected to MongoDB `);
 });
 
 const start = async () => {

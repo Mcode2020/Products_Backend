@@ -1,7 +1,10 @@
 import mongoose, { ConnectOptions, Connection } from "mongoose";
 
-const dbUrl = "mongodb+srv://keshav:2uQXZGEIwIDLVYIA@cluster0.wijl0kc.mongodb.net/sales"; 
+import dotenv from "dotenv";
 
+dotenv.config(); 
+
+const dbUrl = process.env.DB_URL as string;
 
 const options: ConnectOptions = {
   useNewUrlParser: true as any,
